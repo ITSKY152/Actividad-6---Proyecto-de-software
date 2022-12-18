@@ -1,0 +1,48 @@
+<section id="gallery" class="gallery margin-top-120 bg-white">
+    <!-- Portfolio container-->
+    <div class="container">
+        <div class="row">
+            <div class="main-gallery main-model roomy-80">
+                <div class="col-md-12 m-bottom-60">
+                    <div class="filters-button-group sm-text-center">
+                        <button class="button is-checked" data-filter="*">Ver todos</button>
+                        <button class="button" data-filter=".Alimentos">Alimentos</button>
+                        <button class="button" data-filter=".Juguetes">Juguetes</button>
+                        <button class="button" data-filter=".Medicamentos">Medicamentos</button>
+                        <button class="button" data-filter=".Accesorios">Accesorios</button>
+                    </div>
+                </div>
+
+                <div style="clear: both;"></div>
+
+                <div class="grid models text-center">
+                    {{#each datos}}
+                    {{#each this}}
+                    {{#if name}}
+                    <div class="grid-item model-item card {{category}}" style="margin-bottom: 40px;">
+                        <img alt="" src={{imageUrl}} class="card-img-top" style="height: 100px; width: 50%; margin-bottom: 10px;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="color:#f27649;">{{name}}</h4>
+                            <h4>{{price}}$</h4>
+                            <p class="card-text">En stock quedan {{stock}}</p>
+                            <a href="http://localhost:3000/cliente" class="btn btn-primary" style=" border-color:#f27649; background-color:#f27649;"   >Cotizar</a>
+                        </div>
+                    </div><!-- End off grid item -->
+                    {{/if}}
+                    {{/each}}
+                    {{/each}}
+                </div>
+
+                <div style="clear: both;"></div>
+
+            </div>
+        </div>
+    </div><!-- Portfolio container end -->
+</section><!-- End off portfolio section -->
+
+
+{{!-- 
+
+
+
+{{datos}} --}}

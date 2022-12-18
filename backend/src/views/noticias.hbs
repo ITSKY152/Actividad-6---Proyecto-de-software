@@ -1,0 +1,35 @@
+<!--Blog Features Section-->
+<section id="blog_fashion" class="blog_fashion roomy-100">
+    <div class="container">
+        <div class="row">
+            <div class="blog_area fix">
+                {{#each objeto}}
+                {{#each this}}
+                <div class="col-md-4">
+                    <div class="blog_item m-top-30">
+                        <a href={{links}} target="_blank">
+                        <div class="blog_item_img">
+                            <img src={{imagenes}} alt="" />
+                        </div>
+                        <ol class="breadcrumb">
+                            <li><a href="#" class="text-black">{{ciudad}}</a></li>
+                            <li><a href="#" class="text" style="color: #f27649;">{{fecha}}</a></li>
+                        </ol>
+                        <h5>{{titulo}}</h5>
+                        </a>
+                       {{!--  <p class="m-top-20">Primer análisis de la mascota de una mujer contagiada arrojó que tiene el
+                            mal, pero de manera débil.</p> --}}
+                    </div>
+                </div><!-- End off col-md-4 -->
+                {{/each}}
+                {{/each}}
+            </div>
+
+        </div>
+
+    </div><!-- End off container -->
+</section><!-- End off blog Fashion -->
+
+
+
+
